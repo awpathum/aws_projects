@@ -4,16 +4,23 @@ frameworkVersion: "3"
 plugins:
   - serverless-dynamodb-local
   - serverless-offline
+  - serverless-iam-roles-per-function
 
 provider:
   name: aws
   runtime: nodejs18.x
   stage: dev
   region: us-east-1
+      
 
 functions:
   createNote:
     handler: handler.createNote
+    iamRoleStatements:
+      - Effect: "Allow"        
+        Action:
+          - dynamodb:PutItem        
+        Resource: !GetAtt notesTable.Arn
     events:
       - http:
           method: post
