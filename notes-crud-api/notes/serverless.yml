@@ -9,7 +9,7 @@ plugins:
 provider:
   name: aws
   runtime: nodejs18.x
-  stage: dev
+  stage: ${opt:stage, 'dev'}
   region: us-east-1
       
 
@@ -86,7 +86,7 @@ functions:
           authorizer: 
             name: userpool_authorizer
             type: COGNITO_USER_POOLS
-            # arn: ${ssm:/notes/dev/userPoolId}
+            # arn: ${ssm:/notes/${self:provider.stage}/userPoolArn}
             arn: !GetAtt cognitoUserPool.Arn
 
 resources:
