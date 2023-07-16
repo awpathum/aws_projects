@@ -2,8 +2,8 @@ service: notes-api
 frameworkVersion: "3"
 
 plugins:
-  - serverless-dynamodb-local
-  - serverless-offline
+  # - serverless-dynamodb-local
+  # - serverless-offline
   - serverless-iam-roles-per-function
 
 provider:
