@@ -8,7 +8,7 @@ phases:
     commands:
       - echo Installin serverless CLI
       - npm i -g serverless
-      - cd notes
+      - cd notes-crud-api/notes
       - echo Installing npm dependencies of notes service
       - npm install
     # steps:
