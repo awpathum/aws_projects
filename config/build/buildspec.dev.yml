@@ -21,8 +21,8 @@ phases:
       - serverless package --package my-artifact --stage dev
 artifacts:
   files:
-    - notes-crud-api/notes/my-artifact/*
+    - my-artifact/*
   name: MyProjectArtifacts
 cache:
   paths:
-    - 'notes/node_modules/**/*'
+    - 'node_modules/**/*'
