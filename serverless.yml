@@ -5,6 +5,7 @@ plugins:
   # - serverless-dynamodb-local
   # - serverless-offline
   - serverless-iam-roles-per-function
+  - serverless-plugin-typescript
 
 provider:
   name: aws

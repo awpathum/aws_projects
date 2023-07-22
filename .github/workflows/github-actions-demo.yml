@@ -3,7 +3,7 @@ name: Deploy note API branch
 on:
   push:
     branches:
-      - master
+      - section_10
 
 jobs:
   productionDeployment:
